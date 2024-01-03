@@ -1,0 +1,46 @@
+{
+  "name": "picgo-plugin-image-name-format",
+  "version": "0.1.0",
+  "author": "Cesar Lai",
+  "description": "A picgo plugin to format filename by your setting.",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "type": "commonjs",
+  "keywords": [
+    "picgo",
+    "picgo-plugin",
+    "format",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "package.json",
+    "LICENSE"
+  ],
+  "repository": "git@github.com:CesarLai/picgo-plugin-image-name-format.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@8.11.0",
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.11.0"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "rimraf dist && tspc"
+  },
+  "dependencies": {
+    "dayjs": "1.11.10"
+  },
+  "devDependencies": {
+    "@types/node": "16.9.1",
+    "picgo": "1.5.0-alpha.13",
+    "rimraf": "5.0.5",
+    "ts-patch": "3.1.1",
+    "tslib": "2.6.2",
+    "typescript": "5.0.2",
+    "typescript-transform-paths": "3.4.6"
+  }
+}

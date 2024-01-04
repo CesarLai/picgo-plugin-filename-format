@@ -1,6 +1,6 @@
 import type { IPicGo } from 'picgo'
 import fs from 'fs'
-import { isUrl } from './util'
+import { isUrl } from '@/utils'
 
 /**
  * beforeTransformPlugins handle function

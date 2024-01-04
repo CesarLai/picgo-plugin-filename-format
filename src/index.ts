@@ -2,7 +2,7 @@ import type { IPicGo } from 'picgo'
 import handleBeforeTransformPlugins from './beforeTransformPlugins'
 import handleBeforeUploadPlugins from './beforeUploadPlugins'
 
-const PLUGIN_NAME: Readonly<string> = 'image-name-format'
+const PLUGIN_NAME: Readonly<string> = 'filename-format'
 
 /**
  * picgo image filename format plugin

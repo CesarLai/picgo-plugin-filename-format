@@ -1,5 +1,5 @@
 {
-  "name": "picgo-plugin-image-name-format",
+  "name": "picgo-plugin-filename-format",
   "version": "0.1.0",
   "author": "Cesar Lai",
   "description": "A picgo plugin to format filename by your setting.",
@@ -18,7 +18,7 @@
     "package.json",
     "LICENSE"
   ],
-  "repository": "git@github.com:CesarLai/picgo-plugin-image-name-format.git",
+  "repository": "git@github.com:CesarLai/picgo-plugin-filename-format.git",
   "publishConfig": {
     "access": "public"
   },

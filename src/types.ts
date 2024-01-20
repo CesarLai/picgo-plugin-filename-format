@@ -1,20 +1,22 @@
 export type FormatType = 'timestamp' | 'time' | 'hash' | 'uuid' | 'origin'
 
 export interface TimestampFormatOptions {
-  length?: 10 | 13 | '10' | '13'
+  length?: 10 | 13
 }
 
 export interface TimeFormatOptions {
   timeFormat?: string
+  nameFormat?: Exclude<FormatType, 'time'>
+  nameOptions?: any
 }
 
 export interface HashFormatOptions {
   type?: string
-  length?: number | string
+  length?: number
 }
 
 export interface BasePluginSetting<T extends FormatType, O = any> {
-  format?: T
+  format: T
   options?: O
 }
 
@@ -37,3 +39,9 @@ export type PluginSetting =
   | HashPluginSetting
   | UuidPluginSetting
   | OriginPluginSetting
+
+export type FormatterFunc = (originName: string, config: PluginSetting) => string
+export type Formatter = FormatterFunc & {
+  // (originName: string, config: PluginSetting): string
+  formatterType: string
+}

@@ -1,22 +1,15 @@
-import { HashFormatOptions, PluginSetting, TimeFormatOptions, TimestampFormatOptions } from "@/types";
+import { PluginSetting } from '@/types'
 
 const DefaultPluginSetting: Readonly<PluginSetting> = {
   format: 'origin'
 }
 
-const DefaultTimestampFormatOptions: Readonly<TimestampFormatOptions> = {
-  length: 13
+export const parsePluginSetting = (
+  setting: PluginSetting | undefined
+): PluginSetting => {
+  return setting?.format ? setting : DefaultPluginSetting
 }
 
-const DefaultTimeFormatOptions: Readonly<TimeFormatOptions> = {
-  timeFormat: 'YYYYMMDDHHmmss'
-}
-
-const DefaultHashFormatOptions: Readonly<HashFormatOptions> = {
-  type: '',
-  length: 32
-}
-
-export const parsePluginSetting = (setting: PluginSetting | undefined) => {
-
+export const getExt = (fileName: string) => {
+  return /(\.[a-zA-Z]+)?$/.exec(fileName)?.[1] || ''
 }

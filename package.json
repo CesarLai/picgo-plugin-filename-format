@@ -29,7 +29,8 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rimraf dist && tspc"
+    "build": "rimraf dist && tspc",
+    "publish": "pnpm publish --no-git-checks"
   },
   "dependencies": {
     "dayjs": "1.11.10",

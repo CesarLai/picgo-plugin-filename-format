@@ -1,6 +1,6 @@
 {
   "name": "@cesarlai/picgo-plugin-filename-format",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Cesar Lai",
   "description": "A picgo plugin to format filename by your setting.",
   "main": "dist/index.js",

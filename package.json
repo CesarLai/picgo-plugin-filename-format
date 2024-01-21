@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-filename-format",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Cesar Lai",
   "description": "A picgo plugin to format filename by your setting.",
   "main": "dist/index.js",
@@ -29,8 +29,7 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "build": "rimraf dist && tspc",
-    "publish": "pnpm publish --no-git-checks"
+    "build": "rimraf dist && tspc"
   },
   "dependencies": {
     "dayjs": "1.11.10",

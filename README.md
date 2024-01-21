@@ -6,16 +6,18 @@ A picgo plugin to format filename by your setting.
 
 ```sh
 # Mac
-cd ~/.picgo && npm i --save picgo-plugin-filename-format
+cd ~/.picgo
+npm i --save picgo-plugin-filename-format@npm:@cesarlai/picgo-plugin-filename-format
 # Windows
-cd C:\\Users\\<Your User Name>\\.picgo && npm i --save picgo-plugin-filename-format
+cd C:\\Users\\<Your User Name>\\.picgo
+npm i --save picgo-plugin-filename-format@npm:@cesarlai/picgo-plugin-filename-format
 ```
 
 ## Usage
 
 After install this plugin, you should edit `.picgo/config.json` like this
 
-```json
+```jsonc
 {
   "picBed": {
     "uploader": "aliyun",
@@ -90,7 +92,7 @@ Format type `uuid` need't to set options.
 
 Example
 
-```json
+```jsonc
 {
   "format": "hash",
   "options": {
@@ -108,7 +110,7 @@ Example
 
 Example
 
-```json
+```jsonc
 {
   "format": "timestamp",
   "options": {
@@ -127,7 +129,7 @@ Example
 
 Example
 
-```json
+```jsonc
 {
   "format": "time",
   "options": {

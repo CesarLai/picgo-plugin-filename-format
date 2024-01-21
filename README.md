@@ -2,6 +2,8 @@
 
 A picgo plugin to format filename by your setting.
 
+You can use this plugin with Typora to format file name before upload.
+
 ## Installation
 
 ```sh

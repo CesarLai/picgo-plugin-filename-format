@@ -16,6 +16,7 @@ export interface HashFormatOptions {
 }
 
 export interface BasePluginSetting<T extends FormatType, O = any> {
+  public?: string
   format: T
   options?: O
 }

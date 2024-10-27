@@ -12,13 +12,18 @@ const createUploader = (): IPlugin => {
       const fullConfig = parsePluginSetting(config)
       ctx.output = ctx.output.map((img) => {
         const imgOutputPath = path.resolve(fullConfig.public, img.fileName)
-        fs.writeFileSync(imgOutputPath, img.buffer, {
-          flag: 'r'
-        })
+        if (!fs.existsSync(path.dirname(imgOutputPath)))
+          fs.mkdirSync(path.dirname(imgOutputPath))
 
-        const imgUrl = path.resolve('/', img.fileName)
+        fs.writeFileSync(imgOutputPath, img.buffer)
+
+        const imgUrl = [
+          '/',
+          img.fileName.replace(/^(?:\\|\/)|(?:\\|\/)$/g, '')
+        ].join('')
         img.imgUrl = imgUrl
         img.url = imgUrl
+
         return img
       })
 

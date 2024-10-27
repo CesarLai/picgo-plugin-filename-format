@@ -12,7 +12,10 @@ const DefaultPluginSetting: Readonly<PluginSetting> = {
 export const parsePluginSetting = (
   setting: PluginSetting | undefined
 ): PluginSetting => {
-  return setting?.format ? setting : DefaultPluginSetting
+  return {
+    ...DefaultPluginSetting,
+    ...setting
+  }
 }
 
 export const getExt = (fileName: string) => {
